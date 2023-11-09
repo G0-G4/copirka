@@ -9,4 +9,8 @@ controller = keyboard.Controller()
 for i in range(3):
     print(i)
     time.sleep(1)
-controller.type(data)
+print(data)
+data = data.replace('\n', '')
+for c in data:
+    controller.type(c)
+    time.sleep(0.01)
